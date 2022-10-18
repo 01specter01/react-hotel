@@ -12,7 +12,7 @@ function App() {
                     The kustomer is called {element.guest.firstName}{" "}
                     {element.guest.lastName}
                 </p>
-                <p>The checkIn date: {element.checkIn.reverse()}</p>
+                <p>The checkIn date: {element.checkIn}</p>
                 <p>The checkIn date: {element.checkOut}</p>
                 <br></br>
             </div>
