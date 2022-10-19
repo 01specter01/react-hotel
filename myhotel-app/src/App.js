@@ -3,21 +3,22 @@ import rooms from "./rooms.json";
 console.log(rooms);
 
 function App() {
-    return rooms.map((element, i) => {
-        console.log(element);
-        return (
-            <div key={i}>
-                <p>The RoomNumber is: {element.roomNo}</p>
-                <p>
-                    The kustomer is called {element.guest.firstName}{" "}
-                    {element.guest.lastName}
-                </p>
-                <p>The checkIn date: {element.checkIn}</p>
-                <p>The checkIn date: {element.checkOut}</p>
-                <br></br>
-            </div>
-        );
-    });
+    return rooms
+        .sort((a, b) => a.roomNo - b.roomNo)
+        .map((element, i) => {
+            return (
+                <div key={i}>
+                    <p>The RoomNumber is: {element.roomNo}</p>
+                    <p>
+                        The kustomer is called {element.guest.firstName}{" "}
+                        {element.guest.lastName}
+                    </p>
+                    <p>The checkIn date: {element.checkIn}</p>
+                    <p>The checkIn date: {element.checkOut}</p>
+                    <br></br>
+                </div>
+            );
+        });
 }
 
 export default App;
