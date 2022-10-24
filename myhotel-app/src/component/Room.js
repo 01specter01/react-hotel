@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from "react";
+import Button from "./Button";
+import { room } from "../rooms.json";
 
-function Room({ element }) {
+export default function Room({ element }) {
+    // const [checkedIn, setCheckedIn] = useState(false);
     // useEffect(() => {
-    //     document.title = `${checkedIn}`;
-    // if (`${(element.roomNo = false)}`) {
-    //     alert(`Zimmer Nr. {element.roomNo} ist nun belegt.`);
-    // }
-    // });
-    const [checkedIn, setCheckedIn] = useState(false);
-    const handleEvent = () => {
-        setCheckedIn(!checkedIn);
-        console.log("event:", checkedIn);
-        useEffect(({checkedIn}) => {
-            if ({checkedIn} === true) {
-                alert(`Zimmer Nr. <roomNo> ist nun belegt.`);
-            }
-    
+    //     if (checkedIn) {
+    //         const buttonElem = document.getElementById("handleEvent");
+
+    //         buttonElem.innerText = alert(`Zimmer Nr.  ist nun belegt.`);
+    //     }
+    // }, [checkedIn]);
+
+    // const handleEvent = () => {
+    //     setCheckedIn(!checkedIn);
+    //     console.log("event:", checkedIn);
+
     return (
         <div className="room">
-            <button onClick={handleEvent}>CheckIn</button>
             <p>The RoomNumber is: {element.roomNo}</p>
             <p>
                 The customer is called {element.guest.firstName}{" "}
@@ -39,8 +38,8 @@ function Room({ element }) {
                 {"-"}
                 {element.checkOut.slice(0, 4)}
             </p>
+            <Button roomNr={element.roomNo} />
             <br></br>
         </div>
     );
 }
-export default Room

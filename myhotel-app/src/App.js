@@ -10,7 +10,7 @@ function App() {
         .map((element, i) => {
             return <Room element={element} key={i} />;
         });
-    return <div className="App">{roomComponents} ;</div>;
+    return <div className="App">{roomComponents}</div>;
 }
 
 export default App;
