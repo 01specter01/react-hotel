@@ -1,7 +1,8 @@
 import rooms from "./rooms.json";
 import "./App.css";
 import Room from "./component/Room";
-console.log(rooms);
+
+// console.log(rooms);
 
 function App() {
     const roomComponents = rooms
@@ -9,7 +10,7 @@ function App() {
         .map((element, i) => {
             return <Room element={element} key={i} />;
         });
-    return <div className="App">{roomComponents}</div>;
+    return <div className="App">{roomComponents} ;</div>;
 }
 
 export default App;
