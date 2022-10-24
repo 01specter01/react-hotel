@@ -3,19 +3,6 @@ import Button from "./Button";
 import { room } from "../rooms.json";
 
 export default function Room({ element }) {
-    // const [checkedIn, setCheckedIn] = useState(false);
-    // useEffect(() => {
-    //     if (checkedIn) {
-    //         const buttonElem = document.getElementById("handleEvent");
-
-    //         buttonElem.innerText = alert(`Zimmer Nr.  ist nun belegt.`);
-    //     }
-    // }, [checkedIn]);
-
-    // const handleEvent = () => {
-    //     setCheckedIn(!checkedIn);
-    //     console.log("event:", checkedIn);
-
     return (
         <div className="room">
             <p>The RoomNumber is: {element.roomNo}</p>
