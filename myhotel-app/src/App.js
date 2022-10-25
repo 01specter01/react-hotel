@@ -1,10 +1,8 @@
 import rooms from "./rooms.json";
 import "./App.css";
 import Room from "./component/Room";
-import { createElement } from "react";
 import Form from "./component/Form";
 
-// const newArray = [].map((element) => ({ ...element, a: false }));
 function App() {
     const roomComponents = rooms
         .sort((a, b) => a.roomNo - b.roomNo)
