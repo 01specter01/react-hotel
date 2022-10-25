@@ -26,6 +26,7 @@ export default function Room({ element }) {
             </p>
             <p>Check-In was on the: {element.checkIn}</p>
             <Button roomNr={element.roomNo} />
+
             <br></br>
         </div>
     );
