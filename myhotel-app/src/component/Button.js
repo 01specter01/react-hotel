@@ -4,9 +4,11 @@ import { Room } from "./Room";
 
 export default function Button({ roomNr }) {
     const [checkedIn, setCheckedIn] = useState(false);
+
     useEffect(() => {
+        // setCounter(localStorage.getItem("checkedIn") || 0);
         if (checkedIn) {
-            alert(`Zimmer NR. ${roomNr} ist nicht verfügbar.`);
+            alert(`Zimmer NR. ${roomNr} ist nicht mehr verfügbar.`);
         }
     }, [checkedIn]);
 
@@ -17,7 +19,7 @@ export default function Button({ roomNr }) {
 
     return (
         <div>
-            <button onClick={handleclick}>Check In</button>
+            <button onClick={handleclick}>Check-In / Check-Out</button>
         </div>
     );
 }

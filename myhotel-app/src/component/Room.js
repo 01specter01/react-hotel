@@ -16,15 +16,15 @@ export default function Room({ element }) {
                 {element.checkIn.slice(5, 7)}
                 {"-"}
                 {element.checkIn.slice(0, 4)}
-            </p>
-            ss it to the Message component.
-            <p>
+                <br></br>
+                <br></br>
                 The checkOut date: {element.checkOut.slice(8)}
                 {"-"}
                 {element.checkOut.slice(5, 7)}
                 {"-"}
                 {element.checkOut.slice(0, 4)}
             </p>
+            <p>Check-In was on the: {element.checkIn}</p>
             <Button roomNr={element.roomNo} />
             <br></br>
         </div>
