@@ -4,8 +4,7 @@ import Room from "./component/Room";
 import { createElement } from "react";
 import Form from "./component/Form";
 
-// console.log(rooms);
-const newArray = [].map((element) => ({ ...element, a: false }));
+// const newArray = [].map((element) => ({ ...element, a: false }));
 function App() {
     const roomComponents = rooms
         .sort((a, b) => a.roomNo - b.roomNo)
